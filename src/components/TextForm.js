@@ -58,16 +58,16 @@ export default function TextForm(props) {
         <div className="mb-3">
           <textarea className="form-control" value={text} /*style={{backgroundColor:props.mode==='dark'?'lightgrey':'white'}}*/ onChange={handleOnChange} id="myBox" rows="8" ></textarea>
         </div>
-        <button className="btn btn-primary mx-2" onClick={handleUpClick}>UPPER CASE</button>
-        <button className="btn btn-primary mx-2" onClick={handleLowClick}>LOWER CASE</button>
-        <button className="btn btn-primary mx-2" onClick={handleClearClick}>CLEAR</button>
-        <button className="btn btn-primary mx-2" onClick={handleCopyClick}>COPY TEXT</button>
-        <button className="btn btn-primary mx-2" onClick={handleSpaceClick}>REMOVE SPACES</button>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleUpClick}>UPPER CASE</button>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleLowClick}>LOWER CASE</button>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleClearClick}>CLEAR</button>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleCopyClick}>COPY TEXT</button>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleSpaceClick}>REMOVE SPACES</button>
      
     </div>
     <div className="container my-4 " style={{color:props.mode==='dark'?'white':'black'}}>
         <h5>YOUR TEXT SUMMARY</h5>
-        <p> {text.split(" ").length} words and {text.length} characters</p>
+        <p> {text.split(" ").filter((event)=>{return event.length!==0}).length} words and {text.length} characters</p>
         <p> {0.008*text.split(" ").length} Minutes read</p>
         <h5>PREVIEW</h5>
         <p>{text.length>0?text:"Type something"}</p>
