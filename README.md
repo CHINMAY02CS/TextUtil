@@ -1,5 +1,8 @@
 
-##### CHECK PROJECT AT - [MYAPP](https://chinmay02cs.github.io/TextUtil/)
+#### CHECK PROJECT AT - [MYAPP](https://chinmay02cs.github.io/TextUtil/)
+
+# TextUtils - React app
+This project aims to create a react app that modifies text according to the provided options for the user. 
 
 # Getting Started with Create React App
 
